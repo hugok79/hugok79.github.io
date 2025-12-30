@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="color-scheme" content="dark">
+
+  <title>Lost In Translation • Hugo Carvalho (hugok79)</title>
+  <meta name="author" content="Hugo Carvalho (hugok79)" />
+  <meta name="description" content="Hugo Carvalho — Translator/Reviewer (pt-PT). Lost In Translation." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://hugok79.github.io/" />
+
+  <meta property="og:updated_time" content="2025-12-30T18:25:00Z" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hugok79.github.io/">
+  <meta property="og:title" content="Lost In Translation • Hugo Carvalho (hugok79)">
+  <meta property="og:description" content="Hugo Carvalho (hugok79) — Translator/Reviewer (pt-PT). Lost In Translation 🌍 Language: EN▸PT.">
+  <meta property="og:image" content="https://hugok79.github.io/assets/avatar.png">
+  <meta property="og:site_name" content="Hugo Carvalho">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hugok79.github.io/">
+  <meta name="twitter:title" content="Lost In Translation • Hugo Carvalho (hugok79)">
+  <meta name="twitter:description" content="Hugo Carvalho (hugok79) — Translator/Reviewer (pt-PT). Lost In Translation 🌍 Language: EN▸PT.">
+  <meta name="twitter:image" content="https://hugok79.github.io/assets/avatar.png">
+
+  <link rel="icon" type="image/png" href="https://hugok79.github.io/assets/avatar.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0:#0b0f17;
+      --bg1:#101a34;
+      --txt:#e5e7eb;
+      --muted:#a1a1aa;
+      --line: rgba(255,255,255,.10);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      color:var(--txt);
+      font-family: var(--sans);
+      background:
+        radial-gradient(1100px 650px at 50% 8%, rgba(125,211,252,.12), transparent 60%),
+        radial-gradient(900px 600px at 75% 30%, rgba(167,139,250,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+    }
+
+    .wrap{
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: 80px 18px 100px;
+      text-align: center;
+    }
+
+    h1{
+      margin:0;
+      font-family: var(--mono);
+      font-size: clamp(32px, 5vw, 46px);
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .accent{
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .nick{
+      margin-top: 16px;
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tagline{
+      margin-top: 18px;
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .langLine{
+      margin-top: 26px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      cursor:pointer;
+    }
+
+    .langToggle{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.16);
+      color: var(--txt);
+    }
+
+    .avatarWrap{
+      margin: 52px auto 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      padding: 3px;
+      background: linear-gradient(180deg, rgba(125,211,252,.35), rgba(167,139,250,.35));
+      box-shadow: var(--shadow);
+      display:grid;
+      place-items:center;
+    }
+
+    .avatar{
+      width:100%;
+      height:100%;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      background:#111;
+    }
+
+    h2{
+      margin-top: 48px;
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .5px;
+      color: #c7d2fe;
+    }
+
+    .text{
+      width: min(560px, 100%);
+      margin: 20px auto 0;
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 14px;
+      line-height: 1.9;
+      color: #d4d4d8;
+    }
+
+    .links{
+      width: min(420px, 100%);
+      margin: 24px auto 0;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .btn{
+      padding: 15px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--txt);
+      text-decoration:none;
+      transition:.15s;
+    }
+
+    .btn:hover{
+      border-color: rgba(125,211,252,.35);
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.06);
+    }
+
+    footer{
+      margin-top: 56px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer a{
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .year-hacker-glitch{
+      color: #7dd3fc;
+      text-shadow: 0 0 8px rgba(125,211,252,.35);
+    }
+
+    .year-hacker-done{
+      color:#c7d2fe;
+      transition: color .4s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <h1 data-i18n="title"></h1>
+    <div class="nick" data-i18n="nick"></div>
+    <div class="tagline" data-i18n="tagline"></div>
+
+    <div class="langLine" onclick="toggleLang()">
+      <span data-i18n="langLabel"></span>
+      <span class="langToggle" id="langToggle"></span>
+    </div>
+
+    <div class="avatarWrap">
+      <img class="avatar" src="assets/avatar.png" alt="Hugo Carvalho avatar">
+    </div>
+
+    <h2 data-i18n="aboutTitle"></h2>
+    <div class="text" data-i18n="aboutText"></div>
+
+    <h2 data-i18n="connectionsTitle"></h2>
+    <div class="links">
+      <a class="btn" href="https://github.com/hugok79" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn" href="mailto:hugokarvalho@hotmail.com" data-i18n="btnEmail">Email</a>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Hugo Carvalho · <span data-i18n="madeBy"></span>
+      <a href="https://blackspirits.github.io" target="_blank" rel="noopener noreferrer">BlackSpirits</a>
+    </footer>
+  </main>
+
+  <script>
+    // Simple in-page i18n (toggle by clicking the language pill)
+    const texts = {
+      en:{
+        htmlLang:"en",
+        title:"Hi, I’m <span class='accent'>Hugo Carvalho</span>",
+        nick:"(hugok79)",
+        tagline:"Lost In Translation 🌍",
+        langLabel:"Language:",
+        langToggle:"EN ▸ PT",
+        aboutTitle:"About me",
+        aboutText:"I’m a technology enthusiast and translator/reviewer for several projects in European Portuguese (pt-PT).",
+        connectionsTitle:"Connections",
+        btnEmail: "Email",
+        madeBy:"Made with 💻, ❤️ & ☕ by "
+      },
+      pt:{
+        htmlLang:"pt-PT",
+        title:"Olá, eu sou o <span class='accent'>Hugo Carvalho</span>",
+        nick:"(hugok79)",
+        tagline:"Lost In Translation 🌍",
+        langLabel:"Idioma:",
+        langToggle:"PT ▸ EN",
+        aboutTitle:"Sobre mim",
+        aboutText:"Sou um entusiasta de tecnologia e tradutor/revisor de vários projetos em português europeu (pt-PT).",
+        connectionsTitle:"Ligações",
+        btnEmail: "E-mail",
+        madeBy:"Feito com 💻, ❤️ & ☕ por "
+      }
+    };
+
+    let current = "en";
+
+    function render(lang){
+      const t = texts[lang];
+      document.documentElement.lang = t.htmlLang;
+
+      document.querySelector("[data-i18n='title']").innerHTML = t.title;
+      document.querySelector("[data-i18n='nick']").textContent = t.nick;
+      document.querySelector("[data-i18n='tagline']").textContent = t.tagline;
+      document.querySelector("[data-i18n='langLabel']").textContent = t.langLabel;
+      document.getElementById("langToggle").textContent = t.langToggle;
+      document.querySelector("[data-i18n='aboutTitle']").textContent = t.aboutTitle;
+      document.querySelector("[data-i18n='aboutText']").textContent = t.aboutText;
+      document.querySelector("[data-i18n='connectionsTitle']").textContent = t.connectionsTitle;
+      document.querySelector("[data-i18n='btnEmail']").textContent = t.btnEmail;
+      document.querySelector("[data-i18n='madeBy']").textContent = t.madeBy;
+
+      current = lang;
+    }
+
+    function toggleLang(){
+      render(current === "en" ? "pt" : "en");
+    }
+
+    render("en");
+  </script>
+
+  <script>
+    // Subtle "hacker" year effect: glitch → count up → final highlight
+    (function () {
+      const yearEl = document.getElementById("year");
+      if (!yearEl) return;
+
+      const currentYear = new Date().getFullYear();
+      let displayYear = currentYear - 1;
+      if (displayYear < 2000) displayYear = currentYear;
+
+      yearEl.textContent = displayYear;
+      yearEl.classList.add("year-hacker-glitch");
+
+      const glitchFrames = 12;
+      let frame = 0;
+
+      const glitchInterval = setInterval(() => {
+        yearEl.textContent = String(Math.floor(2000 + Math.random() * 100));
+        frame++;
+
+        if (frame >= glitchFrames) {
+          clearInterval(glitchInterval);
+          startCountUp();
+        }
+      }, 80);
+
+      function startCountUp() {
+        yearEl.textContent = String(displayYear);
+
+        const stepInterval = setInterval(() => {
+          if (displayYear >= currentYear) {
+            clearInterval(stepInterval);
+            yearEl.textContent = String(currentYear);
+            yearEl.classList.remove("year-hacker-glitch");
+            yearEl.classList.add("year-hacker-done");
+            return;
+          }
+
+          displayYear++;
+          yearEl.textContent = String(displayYear);
+        }, 500);
+      }
+    })();
+  </script>
+</body>
+</html>
